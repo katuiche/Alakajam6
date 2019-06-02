@@ -37,6 +37,7 @@ __meta__ = {
 
 [node name="Node2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( 709.88, 297.803 )
+rotation = 3.14159
 
 [node name="Node2D2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 288.747, 296.423 )
@@ -50,9 +51,9 @@ position = Vector2( 153.339, 289.652 )
 scale = Vector2( 1, 25 )
 
 [node name="Avoid3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 507.087, 58.4953 )
+position = Vector2( 508.519, 48.4715 )
 scale = Vector2( 40, 1 )
 
 [node name="Avoid4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 497.815, 532.297 )
+position = Vector2( 498.981, 541.628 )
 scale = Vector2( 40, 1 )

@@ -1,20 +1,27 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://EnemyCar.gd" type="Script" id=1]
 [ext_resource path="res://sprites/car.png" type="Texture" id=2]
 
-[sub_resource type="CircleShape2D" id=3]
+[sub_resource type="PhysicsMaterial" id=3]
+bounce = 20.0
+
+[sub_resource type="CircleShape2D" id=1]
 radius = 15.3108
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 28.6769, 21.5538 )
+extents = Vector2( 15.7149, 16.5364 )
 
 [node name="Enemy" type="RigidBody2D"]
+mass = 0.8
+physics_material_override = SubResource( 3 )
 gravity_scale = 0.0
+contacts_reported = 10
+contact_monitor = true
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
