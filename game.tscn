@@ -1,39 +1,313 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://sprites/ground.png" type="Texture" id=1]
+[ext_resource path="res://Ground.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Car.tscn" type="PackedScene" id=2]
 [ext_resource path="res://EnemyCar.tscn" type="PackedScene" id=3]
-[ext_resource path="res://AvoidArea.tscn" type="PackedScene" id=4]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 24.9366, 24.9657 )
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Ground" type="Sprite" parent="." groups=[
-"Ground",
-]]
+[node name="GroundTiles" type="Node" parent="."]
 editor/display_folded = true
-position = Vector2( 500.831, 293.51 )
-scale = Vector2( 14.4341, 9.87268 )
-texture = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
-[node name="Area2D" type="Area2D" parent="Ground" groups=[
-"Ground",
-]]
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Ground" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 192, 80 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/Area2D"]
-position = Vector2( 1.52588e-005, 0.513344 )
-shape = SubResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Ground12" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 192, 128 )
+
+[node name="Ground23" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 192, 176 )
+
+[node name="Ground34" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 192, 224 )
+
+[node name="Ground49" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 192, 272 )
+
+[node name="Ground60" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 192, 320 )
+
+[node name="Ground61" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 192, 368 )
+
+[node name="Ground74" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 192, 416 )
+
+[node name="Ground82" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 192, 464 )
+
+[node name="Ground97" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 192, 512 )
+
+[node name="Ground4" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 400, 80 )
+
+[node name="Ground14" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 400, 128 )
+
+[node name="Ground27" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 400, 176 )
+
+[node name="Ground36" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 400, 224 )
+
+[node name="Ground45" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 400, 272 )
+
+[node name="Ground57" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 400, 320 )
+
+[node name="Ground63" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 400, 368 )
+
+[node name="Ground73" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 400, 416 )
+
+[node name="Ground81" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 400, 464 )
+
+[node name="Ground92" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 400, 512 )
+
+[node name="Ground7" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 608, 80 )
+
+[node name="Ground17" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 608, 128 )
+
+[node name="Ground30" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 608, 176 )
+
+[node name="Ground39" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 608, 224 )
+
+[node name="Ground50" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 608, 272 )
+
+[node name="Ground59" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 608, 320 )
+
+[node name="Ground62" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 608, 368 )
+
+[node name="Ground72" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 608, 416 )
+
+[node name="Ground88" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 608, 464 )
+
+[node name="Ground95" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 608, 512 )
+
+[node name="Ground2" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 264, 80 )
+
+[node name="Ground13" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 264, 128 )
+
+[node name="Ground26" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 264, 176 )
+
+[node name="Ground35" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 264, 224 )
+
+[node name="Ground44" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 264, 272 )
+
+[node name="Ground53" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 264, 320 )
+
+[node name="Ground65" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 264, 368 )
+
+[node name="Ground79" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 264, 416 )
+
+[node name="Ground89" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 264, 464 )
+
+[node name="Ground96" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 264, 512 )
+
+[node name="Ground5" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 472, 80 )
+
+[node name="Ground15" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 472, 128 )
+
+[node name="Ground28" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 472, 176 )
+
+[node name="Ground40" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 472, 224 )
+
+[node name="Ground46" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 472, 272 )
+
+[node name="Ground58" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 472, 320 )
+
+[node name="Ground70" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 472, 368 )
+
+[node name="Ground78" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 472, 416 )
+
+[node name="Ground84" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 472, 464 )
+
+[node name="Ground99" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 472, 512 )
+
+[node name="Ground8" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 680, 80 )
+
+[node name="Ground18" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 680, 128 )
+
+[node name="Ground25" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 680, 176 )
+
+[node name="Ground37" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 680, 224 )
+
+[node name="Ground48" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 680, 272 )
+
+[node name="Ground54" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 680, 320 )
+
+[node name="Ground67" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 680, 368 )
+
+[node name="Ground80" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 680, 416 )
+
+[node name="Ground90" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 680, 464 )
+
+[node name="Ground100" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 680, 512 )
+
+[node name="Ground3" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 336, 80 )
+
+[node name="Ground20" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 336, 128 )
+
+[node name="Ground22" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 336, 176 )
+
+[node name="Ground33" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 336, 224 )
+
+[node name="Ground43" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 336, 272 )
+
+[node name="Ground56" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 336, 320 )
+
+[node name="Ground66" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 336, 368 )
+
+[node name="Ground77" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 336, 416 )
+
+[node name="Ground83" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 336, 464 )
+
+[node name="Ground98" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 336, 512 )
+
+[node name="Ground6" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 544, 80 )
+
+[node name="Ground16" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 544, 128 )
+
+[node name="Ground29" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 544, 176 )
+
+[node name="Ground38" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 544, 224 )
+
+[node name="Ground47" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 544, 272 )
+
+[node name="Ground51" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 544, 320 )
+
+[node name="Ground69" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 544, 368 )
+
+[node name="Ground76" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 544, 416 )
+
+[node name="Ground86" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 544, 464 )
+
+[node name="Ground93" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 544, 512 )
+
+[node name="Ground9" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 752, 80 )
+
+[node name="Ground19" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 752, 128 )
+
+[node name="Ground21" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 752, 176 )
+
+[node name="Ground32" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 752, 224 )
+
+[node name="Ground42" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 752, 272 )
+
+[node name="Ground55" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 752, 320 )
+
+[node name="Ground68" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 752, 368 )
+
+[node name="Ground75" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 752, 416 )
+
+[node name="Ground87" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 752, 464 )
+
+[node name="Ground94" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 752, 512 )
+
+[node name="Ground10" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 816, 80 )
+
+[node name="Ground11" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 816, 128 )
+
+[node name="Ground24" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 816, 176 )
+
+[node name="Ground31" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 816, 224 )
+
+[node name="Ground41" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 816, 272 )
+
+[node name="Ground52" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 816, 320 )
+
+[node name="Ground64" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 816, 368 )
+
+[node name="Ground71" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 816, 416 )
+
+[node name="Ground85" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 816, 464 )
+
+[node name="Ground91" parent="GroundTiles" instance=ExtResource( 1 )]
+position = Vector2( 816, 512 )
 
 [node name="Node2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( 709.88, 297.803 )
@@ -41,19 +315,3 @@ rotation = 3.14159
 
 [node name="Node2D2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 288.747, 296.423 )
-
-[node name="Avoid" parent="." instance=ExtResource( 4 )]
-position = Vector2( 847.13, 287.553 )
-scale = Vector2( 1, 25 )
-
-[node name="Avoid2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 153.339, 289.652 )
-scale = Vector2( 1, 25 )
-
-[node name="Avoid3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 508.519, 48.4715 )
-scale = Vector2( 40, 1 )
-
-[node name="Avoid4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 498.981, 541.628 )
-scale = Vector2( 40, 1 )
