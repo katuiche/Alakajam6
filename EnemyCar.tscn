@@ -1,16 +1,15 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Car.gd" type="Script" id=1]
+[ext_resource path="res://EnemyCar.gd" type="Script" id=1]
 [ext_resource path="res://sprites/car.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=3]
-radius = 18.974
+radius = 15.3108
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 17.4468, 17.6235 )
+extents = Vector2( 28.6769, 21.5538 )
 
-[node name="Car" type="RigidBody2D"]
-mass = 0.83
+[node name="Enemy" type="RigidBody2D"]
 gravity_scale = 0.0
 script = ExtResource( 1 )
 
@@ -23,4 +22,5 @@ texture = ExtResource( 2 )
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 0, 0.418121 )
 shape = SubResource( 2 )

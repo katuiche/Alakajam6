@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://sprites/ground.png" type="Texture" id=1]
 [ext_resource path="res://Car.tscn" type="PackedScene" id=2]
+[ext_resource path="res://EnemyCar.tscn" type="PackedScene" id=3]
+[ext_resource path="res://AvoidArea.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 24.9366, 24.9657 )
@@ -11,7 +13,8 @@ extents = Vector2( 24.9366, 24.9657 )
 [node name="Ground" type="Sprite" parent="." groups=[
 "Ground",
 ]]
-position = Vector2( 490.665, 274.535 )
+editor/display_folded = true
+position = Vector2( 500.831, 293.51 )
 scale = Vector2( 14.4341, 9.87268 )
 texture = ExtResource( 1 )
 __meta__ = {
@@ -33,4 +36,23 @@ __meta__ = {
 }
 
 [node name="Node2D" parent="." instance=ExtResource( 2 )]
-position = Vector2( 437.764, 226.793 )
+position = Vector2( 709.88, 297.803 )
+
+[node name="Node2D2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 288.747, 296.423 )
+
+[node name="Avoid" parent="." instance=ExtResource( 4 )]
+position = Vector2( 847.13, 287.553 )
+scale = Vector2( 1, 25 )
+
+[node name="Avoid2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 153.339, 289.652 )
+scale = Vector2( 1, 25 )
+
+[node name="Avoid3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 507.087, 58.4953 )
+scale = Vector2( 40, 1 )
+
+[node name="Avoid4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 497.815, 532.297 )
+scale = Vector2( 40, 1 )
