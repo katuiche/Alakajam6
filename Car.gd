@@ -4,50 +4,54 @@ onready var area = $Area2D
 
 var speed = 0
 var direction = 0
-
+var is_rewind = false
 var max_speed = 300
+onready var is_on_table = 10
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
 func _physics_process(delta):
-	var applied_max_speed = max_speed
-	for body in area.get_overlapping_bodies():
-		applied_max_speed -= body.mass
-	if applied_max_speed < 0:
-		applied_max_speed = 0
 	
-#	if Input.is_action_pressed("turn_left"):
-#		direction -= 0.1 * (speed/max_speed)
-#	if Input.is_action_pressed("turn_right"):
-#		direction += 0.1 * (speed/max_speed)
-#	if Input.is_action_pressed("acelerate"):
-#		speed += 0.7
-#	elif Input.is_action_pressed("break"):
-#			speed -= 0.7
-#	else:
-#		if speed > 0:
-#			speed *= 0.99
-#
-#	if speed > applied_max_speed:
-#		speed = applied_max_speed
-#
-#	linear_velocity = Vector2(speed,0).rotated(direction)
-#	rotation = direction
 	if Input.is_action_pressed("acelerate"):
-		apply_central_impulse(Vector2(10,0).rotated(rotation))
-	if Input.is_action_pressed("break"):
-		apply_central_impulse(-Vector2(10,0).rotated(rotation))
+		if linear_velocity.length() < max_speed:
+			apply_central_impulse(Vector2(10,0).rotated(rotation))
+		is_rewind = false
+	elif Input.is_action_pressed("break"):
+		apply_central_impulse(Vector2(10,0).rotated(rotation - PI))
+		is_rewind = true
+	else:
+		apply_central_impulse(-linear_velocity*0.01)
+		
+		
+		
+	var turning_factor = (linear_velocity.length() if linear_velocity.length() < max_speed else max_speed) /(max_speed/1.1)
 	if Input.is_action_pressed("turn_left"):
-		apply_torque_impulse(-30)
+		apply_torque_impulse(-30*turning_factor)
 	if Input.is_action_pressed("turn_right"):
-		apply_torque_impulse(30)
-
-	var force = linear_velocity
-	apply_central_impulse(-force)
-	var diference = angle_to_angle(rotation, force.angle())
-	apply_central_impulse(force.rotated(-diference))
+		apply_torque_impulse(30*turning_factor)
+		
+	
+	if is_on_table > 0:
+		var force = linear_velocity
+		apply_central_impulse(-force)
+		var diference
+		if is_rewind:
+			diference = angle_to_angle(rotation - PI, force.angle())
+		else:
+			diference = angle_to_angle(rotation, force.angle())
+		apply_central_impulse(force.rotated(-diference))
+	
+	var check = true
+	for a in area.get_overlapping_areas():
+		if a.is_in_group("Ground"):
+			check = false
+			break
+			
+	if check:
+		is_on_table -= 1
+		
+	if is_on_table <= 0:
+		z_index = -1
+		gravity_scale = 2
 	
 	
 	

@@ -10,4 +10,4 @@ func _ready():
 
 
 func _process(delta):
-	linear_velocity *= 0.9
+	add_central_force(-linear_velocity*0.1)
